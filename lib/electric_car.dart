@@ -5,4 +5,7 @@ class ElectricCar extends ElectricVehicle {
   ElectricCar(String name, int yearProduce, String battery, String product)
     : super(name, yearProduce, battery, product);
 
+  void printElectricCar(){
+    print("day la xe oto dien\n");
+  }
 }

@@ -1,9 +1,6 @@
-## UML Diagram (Mermaid)
-
-```mermaid
 classDiagram
-    direction TB
-    
+direction TB
+
     class Vehicle {
         <<abstract>>
         + String name
@@ -19,26 +16,25 @@ classDiagram
     class Motobike {
         + String enegine_displacemet
         + describle() void
-        + productBy() void
     }
 
     class ElectricVehicle {
-        <<abstract>>
         + String batteryLevel
         + String product
-        + productBy() void
+        + describle() void // Override từ Vehicle
+        + productBy() void // Triển khai phương thức riêng
     }
 
-    class ElectricCar extends ElectricVehicle {
+    class ElectricCar {
+        + printElectricCar() void
     }
 
-    class ElectricBike extends ElectricVehicle {
+    class ElectricBike {
+        + printElectricBike() void
     }
 
+    // Mối quan hệ KẾ THỪA (Inheritance)
     Vehicle <|-- Motobike
     Vehicle <|-- ElectricVehicle
     ElectricVehicle <|-- ElectricCar
     ElectricVehicle <|-- ElectricBike
-
-    ProductBy <|.. Motobike
-    ProductBy <|.. ElectricVehicle
