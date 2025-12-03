@@ -39,3 +39,4 @@ classDiagram
     Vehicle <|-- ElectricVehicle
     ElectricVehicle <|-- ElectricCar
     ElectricVehicle <|-- ElectricBike
+    ElectricVehicle ..|> ProductBy
