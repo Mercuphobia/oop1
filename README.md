@@ -1,6 +1,7 @@
-classDiagram
-direction TB
 
+
+```mermaid
+classDiagram
     class Vehicle {
         <<abstract>>
         + String name
@@ -19,10 +20,11 @@ direction TB
     }
 
     class ElectricVehicle {
+        <<abstract>>
         + String batteryLevel
         + String product
-        + describle() void // Override từ Vehicle
-        + productBy() void // Triển khai phương thức riêng
+        + describle() void
+        + productBy() void
     }
 
     class ElectricCar {
@@ -33,7 +35,6 @@ direction TB
         + printElectricBike() void
     }
 
-    // Mối quan hệ KẾ THỪA (Inheritance)
     Vehicle <|-- Motobike
     Vehicle <|-- ElectricVehicle
     ElectricVehicle <|-- ElectricCar
